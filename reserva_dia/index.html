@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="back-button" onclick="voltar()">
+        <div class="arrow" onclick="voltar()">
+        </div>
+    </div>
+    <div class="container">
+
+        <div class="content">
+            <div class="top">
+
+                <div class="title">
+                    <h3>Reserva</h3>
+                </div>
+                <div class="subtitle">
+                    <label>É um prazer agendar sua reserva, Name. Vamos começar.</label>
+                </div>
+
+            </div>
+            <div class="below">
+
+                <div class="name-container">
+                    <div class="horario-cont">
+                        <div class="horario">
+                            <label class="text-hor" for="horarios">Horário:</label>
+                            <select>
+                                <option value="" selected></option>
+                                <option value="10:00">10:00</option>
+                                <option value="11:30">11:30</option>
+                                <option value="13:00">13:00</option>
+                                <option value="18:30">18:30</option>
+                                <option value="20:00">20:00</option>
+                                <option value="21:30">21:30</option>
+                                <option value="23:00">23:00</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div id="janeiro" class="calendar-container">
+                        <div class="calendario">
+                            <div class="doistextos">
+                                <div class="up">
+                                    <div class="year">2025</div>
+                                </div>
+                                <div class="down">
+                                    <div class="left-arrow" id="leftJan" onclick="switchDec()"></div>
+                                    <div class="month">Janeiro</div>
+                                    <div class="right-arrow" id="rightJan" onclick="switchFeb()"></div>
+                                </div>
+                            </div>
+                            <div  class="cal">
+                                <table>
+                                    <tr>
+                                        <th>Dom</th>
+                                        <th>Seg</th>
+                                        <th>Ter</th>
+                                        <th>Qua</th>
+                                        <th>Qui</th>
+                                        <th>Sex</th>
+                                        <th>Sab</th>
+                                    </tr>
+                                    <tr>
+                                            <td id="empty"></td>
+                                            <td id="empty"></td>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>3</td>
+                                            <td>4</td>
+                                            <td>5</td>
+                                        </tr>
+                                        <tr>
+                                            <td>6</td>
+                                            <td>7</td>
+                                            <td>8</td>
+                                            <td>9</td>
+                                            <td>10</td>
+                                            <td>11</td>
+                                            <td>12</td>
+                                        </tr>
+                                        <tr>
+                                            <td>13</td>
+                                            <td>14</td>
+                                            <td>15</td>
+                                            <td>16</td>
+                                            <td>17</td>
+                                            <td>18</td>
+                                            <td>19</td>
+                                        </tr>
+                                        <tr>
+                                            <td>20</td>
+                                            <td>21</td>
+                                            <td>22</td>
+                                            <td>23</td>
+                                            <td>24</td>
+                                            <td>25</td>
+                                            <td>26</td>
+                                        </tr>
+                                        <tr>
+                                            <td>27</td>
+                                            <td>28</td>
+                                            <td>29</td>
+                                            <td>30</td>
+                                            <td>31</td>
+                                            <td id="empty"></td>
+                                            <td id="empty"></td>
+                                        </tr>
+                                        <tr>
+                                            <td id="empty">1</td>
+                                            <td id="empty">2</td>
+                                            <td id="empty">3</td>
+                                            <td id="empty">4</td>
+                                            <td id="empty">5</td>
+                                            <td id="empty">6</td>
+                                            <td id="empty">7</td>
+                                        </tr>
+                                    </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="fevereiro" class="calendar-container">
+                        <div class="calendario">
+                            <div class="doistextos">
+                                <div class="up">
+                                    <div class="year">2025</div>
+                                </div>
+                                <div class="down">
+                                    <div class="left-arrow" id="leftFeb" onclick="switchJan()"></div>
+                                    <div class="month">Fevereiro</div>
+                                    <div class="right-arrow" id="rightFeb" onclick="switchMar()"></div>
+                                </div>
+                            </div>
+                            <div  class="cal">
+                                <table>
+                                    <tr>
+                                        <th>Dom</th>
+                                        <th>Seg</th>
+                                        <th>Ter</th>
+                                        <th>Qua</th>
+                                        <th>Qui</th>
+                                        <th>Sex</th>
+                                        <th>Sab</th>
+                                    </tr>
+                                    <tr>
+                                        <td id="empty"></td>
+                                        <td id="empty"></td>
+                                        <td id="empty"></td>
+                                        <td id="empty"></td>
+                                        <td id="empty"></td>
+                                        <td>1</td>
+                                        <td>2</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td>6</td>
+                                        <td>7</td>
+                                        <td>8</td>
+                                        <td>9</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10</td>
+                                        <td>11</td>
+                                        <td>12</td>
+                                        <td>13</td>
+                                        <td>14</td>
+                                        <td>15</td>
+                                        <td>16</td>
+                                    </tr>
+                                    <tr>
+                                        <td>17</td>
+                                        <td>18</td>
+                                        <td>19</td>
+                                        <td>20</td>
+                                        <td>21</td>
+                                        <td>22</td>
+                                        <td>23</td>
+                                    </tr>
+                                    <tr>
+                                        <td>24</td>
+                                        <td>25</td>
+                                        <td>26</td>
+                                        <td>27</td>
+                                        <td>28</td>
+                                        <td id="empty"></td>
+                                        <td id="empty"></td>
+                                    </tr>
+                                    <tr>
+                                        <td id="empty">1</td>
+                                        <td id="empty">2</td>
+                                        <td id="empty">3</td>
+                                        <td id="empty">4</td>
+                                        <td id="empty">5</td>
+                                        <td id="empty">6</td>
+                                        <td id="empty">7</td>
+                                    </tr>
+                                </table>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div id="marco" class="calendar-container">
+                        <div class="calendario">
+                            <div class="doistextos">
+                                <div class="up">
+                                    <div class="year">2025</div>
+                                </div>
+                                <div class="down">
+                                    <div class="left-arrow" id="leftMar" onclick="switchMar()"></div>
+                                    <div class="month">Março</div>
+                                    <div class="right-arrow" id="rightMar" onclick="switchMar()"></div>
+                                </div>
+                            </div>
+                            <div  class="cal">
+                                <table>
+                                    <tr>
+                                        <th>Dom</th>
+                                        <th>Seg</th>
+                                        <th>Ter</th>
+                                        <th>Qua</th>
+                                        <th>Qui</th>
+                                        <th>Sex</th>
+                                        <th>Sab</th>
+                                    </tr>
+                                    <tr>
+                                        <td id="empty"></td>
+                                        <td id="empty"></td>
+                                        <td id="empty"></td>
+                                        <td id="empty"></td>
+                                        <td id="empty"></td>
+                                        <td id="empty"></td>
+                                        <td>1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>3</td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td>6</td>
+                                        <td>7</td>
+                                        <td>8</td>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td>10</td>
+                                        <td>11</td>
+                                        <td>12</td>
+                                        <td>13</td>
+                                        <td>14</td>
+                                        <td>15</td>
+                                    </tr>
+                                    <tr>
+                                        <td>16</td>
+                                        <td>17</td>
+                                        <td>18</td>
+                                        <td>19</td>
+                                        <td>20</td>
+                                        <td>21</td>
+                                        <td>22</td>
+                                    </tr>
+                                    <tr>
+                                        <td>23</td>
+                                        <td>24</td>
+                                        <td>25</td>
+                                        <td>26</td>
+                                        <td>27</td>
+                                        <td>28</td>
+                                        <td>29</td>
+                                    </tr>
+                                    <tr>
+                                        <td>30</td>
+                                        <td>31</td>
+                                        <td id="empty"></td>
+                                        <td id="empty"></td>
+                                        <td id="empty"></td>
+                                        <td id="empty"></td>
+                                        <td id="empty"></td>
+                                    </tr>
+                                </table>
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div id="abril" class="calendar-container">
+                        <div class="calendario">
+                            <div class="doistextos">
+                                <div class="up">
+                                    <div class="year">2025</div>
+                                </div>
+                                <div class="down">
+                                    <div class="left-arrow" id="leftApr" onclick="switchApr()"></div>
+                                    <div class="month">Abril</div>
+                                    <div class="right-arrow" id="rightApr" onclick="switchApr()"></div>
+                                </div>
+                            </div>
+                            <div  class="cal">
+                                <table>
+                                    <tr>
+                                        <th>Dom</th>
+                                        <th>Seg</th>
+                                        <th>Ter</th>
+                                        <th>Qua</th>
+                                        <th>Qui</th>
+                                        <th>Sex</th>
+                                        <th>Sab</th>
+                                    </tr>
+                                    <tr>
+                                        <td id="empty"></td>
+                                        <td id="empty"></td>
+                                        <td>1</td>
+                                        <td>2</td>
+                                        <td>3</td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>7</td>
+                                        <td>8</td>
+                                        <td>9</td>
+                                        <td>10</td>
+                                        <td>11</td>
+                                        <td>12</td>
+                                    </tr>
+                                    <tr>
+                                        <td>13</td>
+                                        <td>14</td>
+                                        <td>15</td>
+                                        <td>16</td>
+                                        <td>17</td>
+                                        <td>18</td>
+                                        <td>19</td>
+                                    </tr>
+                                    <tr>
+                                        <td>20</td>
+                                        <td>21</td>
+                                        <td>22</td>
+                                        <td>23</td>
+                                        <td>24</td>
+                                        <td>25</td>
+                                        <td>26</td>
+                                    </tr>
+                                    <tr>
+                                        <td>27</td>
+                                        <td>28</td>
+                                        <td>29</td>
+                                        <td>30</td>
+                                        <td id="empty"></td>
+                                        <td id="empty"></td>
+                                        <td id="empty"></td>
+                                    </tr>
+                                    <tr>
+                                        <td id="empty">1</td>
+                                        <td id="empty">2</td>
+                                        <td id="empty">3</td>
+                                        <td id="empty">4</td>
+                                        <td id="empty">5</td>
+                                        <td id="empty">6</td>
+                                        <td id="empty">7</td>
+
+                                    </tr>
+                                </table>
+                                
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="below-text">
+                        Problemas com agendamento? <a href="../contato/index.html">Entre em contato</a> . 
+                    </div>
+                </div>
+                <a class="button">Continue</a>
+            </div>
+        </div>
+        <script src="../reserva_dia/script.js"></script>
+</body>
+
+</html>
